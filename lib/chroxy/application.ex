@@ -9,6 +9,7 @@ defmodule Chroxy.Application do
   def start(_type, _args) do
     # HACK to get exec running as root.
     Application.put_env(:exec, :root, true)
+    Exexec.start(%{port_path: "/usr/local/bin/exec-port"})
     {:ok, _} = Application.ensure_all_started(:erlexec)
 
     proxy_opts = Application.get_env(:chroxy, Chroxy.ProxyListener)
