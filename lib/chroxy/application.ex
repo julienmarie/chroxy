@@ -11,6 +11,9 @@ defmodule Chroxy.Application do
     Application.put_env(:exec, :root, true)
     Application.put_env(:exec, :port_path, "/usr/local/bin/exec-port")
     Application.put_env(:exec, :portexe, '/usr/local/bin/exec-port')
+        Application.put_env(:erlexec, :root, true)
+    Application.put_env(:erlexec, :port_path, "/usr/local/bin/exec-port")
+    Application.put_env(:erlexec, :portexe, '/usr/local/bin/exec-port')
     
     IO.inspect :exec.start(portexe: '/usr/local/bin/exec-port')
 
