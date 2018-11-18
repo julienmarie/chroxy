@@ -316,7 +316,7 @@ defmodule Chroxy.ChromeServer do
   # Internal
 
   defp exec_options do
-    %{pty: true, stdin: true, stdout: true, stderr: true}
+    %{pty: true, stdin: true, stdout: true, stderr: true, portexe: '/usr/local/bin/exec-port'}
   end
 
   defp default_opts do
