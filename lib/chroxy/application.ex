@@ -15,6 +15,8 @@ defmodule Chroxy.Application do
     IO.inspect :exec.start(portexe: '/usr/local/bin/exec-port')
 
     {:ok, _} = Application.ensure_all_started(:erlexec)
+        {:ok, _} = Application.ensure_all_started(:exexec)
+
 
     proxy_opts = Application.get_env(:chroxy, Chroxy.ProxyListener)
 
