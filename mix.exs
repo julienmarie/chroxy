@@ -17,7 +17,7 @@ defmodule Chroxy.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :erlexec, :exexec],
+      extra_applications: [:logger],
       mod: {Chroxy.Application, []}
     ]
   end
